@@ -1,0 +1,35 @@
+<section>
+    <div class="container mt-4">
+
+        <h2 class="text-center">Add Product</h2>
+       <form action="/admin/add-products"method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+                <label for="">NO:</label>
+                <input type="text" name="No" class="form-control" id="no" placeholder="Enter the product no:">
+            </div>
+            <div class="form-group">
+                <label for="">Name:</label>
+                <input type="text" name="Name" class="form-control" id="name" placeholder="Enter Product Name">
+            </div>
+            <div class="form-group">
+                <label for="">Description:</label>
+                <textarea  name="Description" class="form-control" id="description" rows="3" placeholder="Enter Description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="">Category:</label>
+                <input type="text" name="Category" class="form-control" id="category" placeholder="Enter Category">
+            </div>
+            <div class="form-group">
+                <label for="">Price:</label>
+                <input type="number" name="Price" class="form-control" id="price" placeholder="Enter Price">
+            </div>
+            <div class="form-group">
+                <label for="">Image:</label>
+                <input type="file" name="Image" class="form-control-file" id="image">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+
+
+    </div>
+</section>

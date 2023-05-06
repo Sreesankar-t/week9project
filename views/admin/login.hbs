@@ -1,0 +1,64 @@
+<section class="container mt-5">
+<div class="wrapper fadeInDown" style="margin-top: 58px;" >
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+   <div id="formFooter">
+       
+      <h2 style="color: rgb(8, 9, 7);">admin login</h2>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/admin/adminLogin" method="POST">
+    {{#if loginErr}}
+                <p class="error fadeIn second" style="color: orangered;">Invalid Username or Password</p>
+    {{/if}}
+      <input type="text" id="login" class="fadeIn second" name="Email" placeholder="Admin email">
+      <input type="password" id="password" class="fadeIn third" name="Password" placeholder="Password" autocomplete="off">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+   
+    <div class="pt-5" id="">
+      
+       <a href="/login">
+    <button class="glow-on-hover" type="button">I am a user</button>
+    </div>
+
+  </div>
+</div>
+
+</section>
+
+
+
+{{!-- <section class="container mt-5" style="background-color: #f2f2f2;">
+  <div class="wrapper fadeInDown" style="margin-top: 58px;">
+    <div id="formContent" class="text-center">
+      <!-- Tabs Titles -->
+      <div id="formFooter">
+        <h2>ADMIN MODE</h2>
+      </div>
+      <!-- Login Form -->
+      <form action="/admin/adminLogin" method="POST">
+        {{#if loginErr}}
+          <p class="error fadeIn second" style="color: orangered;">Invalid Username or Password</p>
+        {{/if}}
+        <input type="text" id="login" class="fadeIn second" name="Email" placeholder="Admin email">
+        <input type="password" id="password" class="fadeIn third" name="Password" placeholder="Password" autocomplete="off">
+        <input type="submit" class="fadeIn fourth" value="Log In" style="background-color: #4CAF50; color: white; border: none; padding: 12px 24px; cursor: pointer; border-radius: 5px;">
+      </form>
+
+      <!-- Remind Passowrd -->
+    
+      <div id="">
+        <a href="/login">
+          <button class="glow-on-hover" type="button" style="background-color: #008CBA; color: white; border: none; padding: 12px 24px; cursor: pointer; border-radius: 5px;">I am a user</button>
+        </a>
+       
+      </div>
+
+    </div>
+  </div>
+</section> --}}

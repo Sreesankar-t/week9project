@@ -1,0 +1,46 @@
+<section>
+    <div class="container">
+        {{!-- <div class="row">
+            <a href="/admin/add-product" class="btn btn-success ml-auto mt-3">Add products</a>
+            <a href="/admin/user-data" class="btn btn-success ml-auto mt-3">User data</a>
+        </div> --}}
+        <table class="table mt-4" id="userTable" >
+            <thead class="thead-dark">
+                <tr>
+                     <th scope="col">➩</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <th scope="row">.</th>
+                    <td>{{this.Name}}</td>
+                    <td>{{this.Email}}</td>
+{{!--                    
+                    <td>
+                        <a href="/admin/edit-user/{{this._id}}" class="btn btn-primary">Edit</a>
+                        <a href="/admin/delete-user/{{this._id}}" class="btn btn-danger" onclick="return confirm('Are you want to delete product {{this.Name}}?')" >Delete</a>
+                        
+                    </td>
+                      --}}
+                </tr>
+                {{/each}}
+         
+            </tbody>
+        </table>
+    </div>
+</section> 
+
+
+
+
+ <script>
+  $(function(){
+    $('#userTable').DataTable({
+        "dom": '<"top"i>rt<"bottom"flp><"clear">',
+    });
+  })
+</script>

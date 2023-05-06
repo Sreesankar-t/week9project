@@ -1,0 +1,50 @@
+<section>
+  <div class="container">
+    <div class="row mt-5">
+       <a href="/admin/user-data" class="btn btn-success mr-auto">Users  Detils</a>
+      <a href="/admin/add-products" class="btn btn-success ml-auto">Add Products</a>
+    
+     
+    </div>
+    <table class="table mt-5" id="productsTable">
+      <thead>
+        <tr>
+          <th scope="col">No</th>
+          <th scope="col">Title</th>
+          <th scope="col">Description</th>
+          <th scope="col">Category</th>
+          <th scope="col">Price</th>
+          <th> image</th>
+          <th scope="col">Update</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        {{#each products}}
+        <tr>
+          <th scope="row">{{this.No}}</th>
+          <td>{{this.Name}}</td>
+          <td>{{this.Description}}</td>
+          <td>{{this.Category}}</td>
+          <td>{{this.Price}}</td>
+          <td><img style="width: 80px;height: 80px;" src="/products-images/{{this._id}}.jpg" alt=""></td>
+          <td>
+            <a href="/admin/edit-product/{{this._id}}" class="btn btn-info">Edit</a>
+            <a href="/admin/delete-product/{{this._id}}" class="btn btn-danger"
+              onclick="return confirm('Are you sure want to delete{{this.Name}}?')">Delete</a>
+
+          </td>
+        </tr>
+        {{/each}}
+
+      </tbody>
+    </table>
+  </div>
+</section>
+<script>
+  $(function () {
+    $('#productsTable').DataTable({
+      "dom": '<"top"i>rt<"bottom"flp><"clear">',
+    });
+  })
+</script>
